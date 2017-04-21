@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+Properties properties = new Properties()
+properties.load(file('./conf/conf/config.properties').newDataInputStream())
+String _channleList = properties.getProperty('channel.list')
+String[] _channelArray = _channleList.split(',')
+String debugVersionName = properties.getProperty('version.name')
+String debugVersionCode = properties.getProperty('version.code')
+
+
+android {
+
+    signingConfigs {
+        debug {
+            keyAlias DebugKeyKeyAlias
+            keyPassword DebugKeyKeyPassword
+            storeFile file(DebugKeyStoreFile)
+            storePassword DebugKeyStorePassword
+        }
+        release {
+            keyAlias ReleaseKeyKeyAlias
+            keyPassword ReleaseKeyKeyPassword
+            storeFile file(ReleaseKeyStoreFile)
+            storePassword ReleaseKeyStorePassword
+        }
+    }
+
+    defaultConfig {
+        versionName debugVersionName
+        versionCode debugVersionCode as int
+    }
+
+    productFlavors {
+        for (int i = 0; i < _channelArray.size(); i++) {
+            def channel = _channelArray[i]
+            "${channel}" {
+                manifestPlaceholders = [JPUSH_CHANNEL: channel]
+            }
+        }
+    }
+}
+

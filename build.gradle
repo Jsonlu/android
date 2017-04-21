@@ -1,0 +1,24 @@
+apply from: "./conf/conf/baseAndroid.gradle"
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile 'com.alibaba:fastjson:1.1.46.android'
+    testCompile 'junit:junit:4.12'
+}
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+    }
+    repositories {
+        maven { url "http://101.37.38.3:8081/repository/latte-maven/" }
+        mavenCentral()
+        jcenter()
+    }
+}

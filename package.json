@@ -1,0 +1,63 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "app",
+        "scope": null,
+        "escapedName": "app",
+        "name": "app",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/jsonlu/WorkSpace/template"
+    ]
+  ],
+  "_from": "app@latest",
+  "_id": "app@1.0.0",
+  "_inCache": true,
+  "_location": "/app",
+  "_nodeVersion": "7.4.0",
+  "_npmUser": {},
+  "_npmVersion": "4.0.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "app",
+    "scope": null,
+    "escapedName": "app",
+    "name": "app",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "http://192.168.8.238/nexus/repository/center-npm/app/-/app-1.0.0.tgz",
+  "_shasum": "f50a870393fef51afbdb8fcbfff68c0997970ace",
+  "_shrinkwrap": null,
+  "_spec": "app",
+  "_where": "/Users/jsonlu/WorkSpace/template",
+  "author": {
+    "name": "JsonLu"
+  },
+  "dependencies": {},
+  "description": "android",
+  "devDependencies": {},
+  "dist": {
+    "shasum": "f50a870393fef51afbdb8fcbfff68c0997970ace",
+    "tarball": "http://192.168.8.238/nexus/repository/center-npm/app/-/app-1.0.0.tgz"
+  },
+  "keywords": [
+    "jsonlu"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "app",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
