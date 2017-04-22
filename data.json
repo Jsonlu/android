@@ -3,35 +3,35 @@
   "data": {
     "android": [
       {
-        "version": "1.0",
+        "version": "master",
         "repository": "git@github.com:Jsonlu/android.git",
         "desc": "初始化项目"
       }
     ],
     "ios": [
       {
-        "version": "1.0",
+        "version": "master",
         "repository": "git@github.com:Jsonlu/ios.git",
         "desc": "初始化项目"
       }
     ],
     "java": [
       {
-        "version": "1.0",
+        "version": "master",
         "repository": "git@github.com:Jsonlu/java.git",
         "desc": "初始化项目"
       }
     ],
     "weex": [
       {
-        "version": "1.0",
+        "version": "master",
         "repository": "git@github.com:Jsonlu/weex.git",
         "desc": "初始化项目"
       }
     ],
     "vue": [
       {
-        "version": "1.0",
+        "version": "master",
         "repository": "git@github.com:Jsonlu/vue.git",
         "desc": "初始化项目"
       }
