@@ -8,33 +8,15 @@
         "desc": "初始化项目"
       }
     ],
-    "ios": [
-      {
-        "version": "master",
-        "repository": "git@github.com:Jsonlu/ios.git",
-        "desc": "初始化项目"
-      }
-    ],
     "java": [
       {
         "version": "master",
         "repository": "git@github.com:Jsonlu/java.git",
         "desc": "初始化项目"
       }
-    ],
-    "weex": [
-      {
-        "version": "master",
-        "repository": "git@github.com:Jsonlu/weex.git",
-        "desc": "初始化项目"
-      }
-    ],
-    "vue": [
-      {
-        "version": "master",
-        "repository": "git@github.com:Jsonlu/vue.git",
-        "desc": "初始化项目"
-      }
     ]
+//    "ios": [],
+//    "weex": [],
+//    "vue": []
   }
 }
