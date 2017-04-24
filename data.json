@@ -4,14 +4,14 @@
     "android": [
       {
         "version": "master",
-        "repository": "git@github.com:Jsonlu/android.git",
+        "repository": "https://github.com/Jsonlu/android.git",
         "desc": "初始化项目"
       }
     ],
     "java": [
       {
         "version": "master",
-        "repository": "git@github.com:Jsonlu/java.git",
+        "repository": "https://github.com/Jsonlu/java.git",
         "desc": "初始化项目"
       }
     ]
