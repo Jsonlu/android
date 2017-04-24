@@ -14,6 +14,13 @@
         "repository": "https://github.com/Jsonlu/java.git",
         "desc": "初始化项目"
       }
+    ],
+    "mock": [
+      {
+        "version": "master",
+        "repository": "https://github.com/Jsonlu/mock.git",
+        "desc": "初始化项目"
+      }
     ]
   }
 }
