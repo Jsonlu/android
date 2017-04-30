@@ -1,9 +1,14 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "data": {
     "android": [
       {
         "version": "master",
+        "repository": "https://github.com/Jsonlu/android.git",
+        "desc": "初始化项目"
+      },
+      {
+        "version": "test",
         "repository": "https://github.com/Jsonlu/android.git",
         "desc": "初始化项目"
       }
