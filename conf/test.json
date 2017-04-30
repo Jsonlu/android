@@ -1,0 +1,31 @@
+{
+  "version": "1.1",
+  "data": {
+    "android": [
+      {
+        "version": "master",
+        "repository": "https://github.com/Jsonlu/android.git",
+        "desc": "初始化项目"
+      },
+      {
+        "version": "test",
+        "repository": "https://github.com/Jsonlu/android.git",
+        "desc": "初始化项目"
+      }
+    ],
+    "java": [
+      {
+        "version": "master",
+        "repository": "https://github.com/Jsonlu/java.git",
+        "desc": "初始化项目"
+      }
+    ],
+    "mock": [
+      {
+        "version": "master",
+        "repository": "https://github.com/Jsonlu/mock.git",
+        "desc": "初始化项目"
+      }
+    ]
+  }
+}
