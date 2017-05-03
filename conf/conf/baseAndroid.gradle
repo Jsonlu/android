@@ -4,6 +4,7 @@ apply from: './conf/conf/multiChanel.gradle'
 allprojects {
     repositories {
         maven { url "http://192.168.8.238/nexus/repository/maven-center" }
+        //maven { url "http://101.37.38.3:8081/repository/latte-maven/" }
         mavenCentral()
         jcenter()
     }
