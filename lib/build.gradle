@@ -1,0 +1,20 @@
+apply from: 'jar.gradle'
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile 'com.alibaba:fastjson:1.1.46.android'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+}
+
+task makeProguardJar(type: proguard.gradle.ProGuardTask, dependsOn: "build") {
+    injars "build/libs/${project.name}.jar"//项目编译但未混淆的jar  
+    outjars "lib/${project.name}-${VersionName}.jar"//混淆后的jar路径  
+    configuration 'proguard-rules.pro'// 混淆配置文件  
+}
+
+makeSign.dependsOn(makeJar, makeProguardJar)

@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 Properties properties = new Properties()
-properties.load(file('./conf/conf/config.properties').newDataInputStream())
+properties.load(file('../conf/config.properties').newDataInputStream())
 String _channleList = properties.getProperty('channel.list')
 String[] _channelArray = _channleList.split(',')
 String debugVersionName = properties.getProperty('version.name')

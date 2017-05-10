@@ -1,0 +1,31 @@
+apply from: '../conf/baseAndroidLib.gradle'
+
+Properties properties = new Properties()
+properties.load(project.file('conf/config.properties').newDataInputStream())
+String packageName = properties.getProperty('PackageName')
+String SignKeyPath = properties.getProperty('SignKeyPath')
+String SignKeyPwd = properties.getProperty('SignKeyPwd')
+String SignKeyAlias = properties.getProperty('SignKeyAlias')
+
+task clearJar(type: Delete) {
+    delete 'build/libs/'
+}
+
+task makeJar(type: Jar, dependsOn: "build") {
+    baseName project.name
+    from("build/intermediates/classes/debug/${packageName}")
+    into(packageName)
+    exclude('test/', 'BuildConfig.class', 'R.class')
+    exclude { it.name.startsWith('R$'); }
+}
+
+makeJar.dependsOn(clearJar, build)
+
+task makeSign(type: Exec) {
+    workingDir './lib'
+    commandLine 'jarsigner', '-verbose', '-keystore', SignKeyPath, '-storepass', SignKeyPwd, '-signedjar', "${project.name}-${VersionName}-sign.jar", "${project.name}-${VersionName}.jar", SignKeyAlias
+    standardOutput = new ByteArrayOutputStream()
+    ext.output = {
+        return standardOutput.toString()
+    }
+}
