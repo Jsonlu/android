@@ -3,12 +3,15 @@ apply from: 'jar.gradle'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
     compile 'com.alibaba:fastjson:1.1.46.android'
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile 'junit:junit:4.12'
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }
 
 task makeProguardJar(type: proguard.gradle.ProGuardTask, dependsOn: "build") {
